@@ -1,0 +1,330 @@
+body{
+	margin:0;
+	font-family: Open Sans,sans-serif;
+}
+#header{
+	width: 100%;
+	min-height: 50px;
+	background: #fff;
+	box-shadow: 0 0 35px rgba(0,0,0,0.1);
+	position: fixed;
+	top: 0;
+}
+.container{
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0px 15px;
+	box-sizing:boder-box;
+	overflow: auto;
+	}
+#logo{
+	float: left;
+}
+#navbar{
+	float: right;
+}
+#logo a{
+	display: block;
+	padding: 12px 15px 0px;
+}
+#navbar ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#navbar li{
+	float: right;
+}
+#navbar li a{
+	display: inline-block;
+	padding: 17px 15px;
+	font-size: 14px;
+	color: #333;
+	text-decoration: none;
+	border-bottom: 2px solid #fff;
+	transition:all 0.3s;
+}
+#navbar .dropdown-content{
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 230px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,.2);
+	z-index: 1;
+
+}
+
+#navbar .dropdown-content li{
+	float: none;
+}
+#navbar .dropdown-content a{
+	display: block;
+	padding: 6px 15px;
+	text-align: right;
+	border-bottom: 2px solid #fff;
+}
+#navbar li a:hover{
+	border-bottom: 2px solid #02b3e4;
+	color: #00aaf6;
+}
+#navbar .dropdown-content a:hover, #navbar li a:hover{
+	border-bottom: 2px solid #02b3e4;
+	color: #00aaf6;
+	background: #fff;
+}
+#navbar .dropdown:hover .dropdown-content{
+	display: block;
+}
+.main{
+	background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(https://ae.udacity.com/one-million-arab-coders/udacity1ed.2076c354169ffbc667eb.jpg) 50% no-repeat;
+	background-size: cover;
+	width:100%;
+	height: 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+ .main h1{
+	color: #fff;
+	font-size: 42px;
+	margin:165px auto 25px;
+
+}
+.main h3{
+	color: #fff;
+	font-size: 18px;
+	margin-top: 0px;
+}
+.main .button{
+	display:inline-block;
+	background: #11b7e6;
+	border: 1px solid #122b40;
+	padding: 5px 30px;
+	border-radius: 4px;
+	margin-top: 10px;
+}
+.main .button a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 28px;
+}
+.main .button:hover{
+	background: #029fcb;
+}
+.main .button:active{
+	background: #204d74;
+}
+
+.section{
+	padding: 70px 0;
+	text-align: center;
+}
+
+.section h2{
+	font-size: 35px;
+	color: #333;
+}
+
+.underline::after{
+	content: "";
+	display: block;
+	width: 100px;
+	height:2px;
+	background-color: #11b7e6;
+	margin: 10px auto 40px;
+}
+.section p{
+	max-width: 720px;
+	margin: 30px auto;
+}
+.info-list ul{
+	text-align: left;
+	list-style-type: circle;
+}
+.info-list ul li{
+	margin-bottom: 18px;
+	font-size: 14px;
+	color: #333;
+}
+.info-list li a{
+	text-decoration: none;
+	color: #00aaf6;
+}
+/*Section1*/
+.track{
+	background: url(https://ae.udacity.com/one-million-arab-coders/software-sec-bg.a6e1a4fcb82f73d68962.jpg)50% no-repeat;
+	background-size: cover;
+	padding: 70px 0;
+	overflow-x:hidden;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	z-index: -1;
+}
+.track .container{
+	display: flex;
+flex-direction: row-reverse;
+}
+
+.track .track-desc{
+	flex:1;
+	text-align: left;
+	padding: 0 15px;
+}
+.track iframe{
+	width: 100%;
+	height: 360px;
+	border:none;
+}
+.track-desc h3, .track-desc h2, .track-desc p{
+	color: #fff;
+	margin:0px;
+}
+.track-desc .underline::after{
+	margin: 15px 0px 30px;
+}
+.track-desc h3{
+	color: #11b7e6;
+	font-size: 40px;
+}
+.track-desc h2{
+	line-height: 42px;
+}
+.track-desc p{
+	font-size: 15px;
+}
+/* Section 2- 3 -4 */
+
+.section > div:nth-of-type(even){
+	background: #fff;
+}
+.section > div:nth-of-type(even) h2, .section > div:nth-of-type(even) p
+{
+	color: #333;
+}
+.section > div:nth-of-type(even) .container{
+	flex-direction: row;
+	
+}
+
+/* Media Query*/
+
+@media(min-width:769px){
+	
+	.track .container{
+		flex-direction: row-reverse;
+	}
+	
+	.section > div:nth-of-type(even) .container{
+		flex-direction: row;
+	}
+	
+}
+.track .container{
+	display: flex;
+	flex-direction: column;
+}
+
+.section > div:nth-of-type(even) .container{
+	flex-direction: column;
+}
+
+
+/**********************************************/
+.faq h2{
+	margin-top: 0;
+	font-size: 25px;
+}
+.faq .container{
+	text-align: left;
+}
+.accordion{
+	width: 100%;
+	position: relative;
+}
+.accordion label{
+	display: block;
+	padding:10px 10px;
+	background-color: #fafafa;
+	border: 1px solid #eee;
+	font-size: 14px;
+	color: #333;
+	cursor: pointer;
+}
+.accordion .accordion-content{
+	border: 1px solid #eee;
+	border-top: none;
+	overflow: hidden;
+	display: none;
+}
+.accordion p{
+	margin: 15px;
+	font-size: 14px;
+	color: #333;
+}
+.accordion input[type=checkbox]{
+	position: absolute;
+	display: none;
+}
+.accordion input[type=checkbox]:checked ~ .accordion-content{
+	display: block;
+}
+.accordion label::after {
+	content: "+";
+	position: absolute;
+	top: 9px;
+	right: 15px;
+	display: block;
+	width: 10px;
+	height: 10px;
+}
+.accordion input[tyoe=checkbox]:checked ~ label::after {
+	content: "-";
+}
+/********************************************/
+
+#main-footer{
+	padding: 10px 0;
+	text-align: center;
+	background: #1c1c1c url(https://ae.udacity.com/one-million-arab-coders/map-pattern-footer.2fc111291aa98103b091.png) center 75% no-repeat;
+	color: #fff;
+}
+#main-footer .underline::after{
+	width: 30px;
+}
+#main-footer p{
+	color: #bbb;
+	font-size: 14px;
+	margin: 6px 0;
+}
+#main-footer p a{
+	color: #bbb;
+	text-decoration: none;
+}
+i{
+	color: #11b7e6;
+}
+#sub-footer{
+	padding: 2px 0;
+	background: #131313;
+	color: #ccc;
+	text-align: center;
+	border-top: 1px solid #323232;
+}
+#sub-footer p{
+	padding: 0;
+	font-size: 14px;
+}
+#sub-footer p a{
+	color: #bbb;
+	text-decoration: none;
+}
+
+
+/********************************************/
+/* Scroll */
+html {
+scroll-behavior: smooth;
+}
